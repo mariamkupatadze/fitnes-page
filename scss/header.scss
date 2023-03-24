@@ -1,0 +1,345 @@
+header{
+    margin-top: 131px;
+
+    .container{
+
+        .row{
+            flex-direction: column;
+            gap:50px;
+            position: relative;
+
+            .girlImg{
+                position: absolute;
+                right: -9%;
+                top:-20%;
+                z-index: -1;
+
+                @include responsive(laptop){
+                   right:0px;
+                }
+
+                @include responsive(tablet){
+                    width: 100%;
+                    height: 1100px;
+                }
+                @include responsive(mobile){
+                   left:0;
+                    top:-40%;
+                    width: 100%;
+                    height: 900px;
+                }
+                @include responsive(small-mobile){
+                    height: 760px;
+                 }
+            }
+
+            .new-box{
+                @include displayFlex ( $gap:15px, $align:center);
+                width: fit-content;
+                height: fit-content;
+                position: relative;
+                padding: 5px;
+                @include responsive(mobile){
+                    position: relative;
+                    margin-top: -80px;
+                 }
+                 @include responsive(tablet){
+                    position: relative;
+                    margin-top: -50px;
+                 }
+                .new{
+                    @include Btn($fitnessGreen, 20px, 4px 10px );
+                    font-family: semiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                      font-size: 10px;
+                    line-height: 18px;
+                    letter-spacing: 1.5px;
+                      color: #FFFFFF;
+                      padding: 4px 10px;
+                      
+                }
+
+                p{
+                    font-family: regular;
+                    font-style: normal;
+                    font-weight: 400;
+                     font-size: 12px;
+                     line-height: 18px;
+                   letter-spacing: 0.5px;
+                    color: #FFFFFF;
+                    opacity: 0.8;
+
+                }
+
+                &::before{
+                    content:'';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    background-color: #FFFFFF;
+                    opacity: 0.2;
+                    border-radius: 20px;
+
+                }
+            }
+
+            h1{
+                font-family: semiBold;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 200px;
+                line-height: 170px;
+                letter-spacing: -2px;
+                color: #FFFFFF;
+
+                @include responsive(laptop){
+                    font-size: 130px;
+                    line-height: 130px;
+                    width: 70%;
+                    position: relative;
+                    margin-top: 100px;
+                }
+                @include responsive(tablet){
+                    font-size: 50px;
+                    width: 30%;
+                    line-height: 70px;
+                }
+
+            }
+            .title{
+                font-family: regular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 29px;
+                letter-spacing: 0.5px;
+                 color: #FFFFFF;
+                opacity: 0.5;
+                width:50%;
+
+                @include responsive(laptop){
+                    width:40%;
+                }
+                @include responsive(mobile){
+                    display: none;
+                }
+            }
+
+            .buttons{
+                
+                @include responsive(tablet){
+                    @include displayFlex ($direction:column, $gap:10px);
+                    width: 21%
+                 }
+                 @include responsive(mobile){
+                    @include displayFlex ($direction:row, $justify:space-between);
+                    width: 100%;
+                   position: relative;
+                   margin-top: 160px;
+                 }
+                 @include responsive(small-mobile){
+                    margin-top: 80px;
+
+                 }
+
+                .start{
+                    @include Btn($fitnessGreen, 10px, 24px 43px );
+
+                    font-family: semiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 22px;
+                     letter-spacing: 1px;
+                     color: #FFFFFF;
+                     margin-right: 30px;
+
+                     @include responsive(laptop){
+                        @include Btn($fitnessGreen, 10px, 20px 15px );
+                        margin-right: 10px;
+                     }
+
+                     @include responsive(tablet){
+                        @include Btn($fitnessGreen, 10px, 20px 20px );
+                        font-size: 12px;
+                        width: 100%;
+                     }
+                     @include responsive(mobile){
+                        width: 40%;
+                     }
+
+                }
+                .Preview{
+                    @include Btn($radius: 10px, $padding: 24px 61px );
+
+                    font-family: semiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 22px;
+                    letter-spacing: 1px;
+                    color: #FFFFFF;
+                    background: transparent;
+                     position: relative;
+
+                     @include responsive(tablet){
+                        @include Btn( $padding: 20px 15px );
+                        font-size: 12px;
+                        width: 100%;
+                       
+                    }
+                    @include responsive(mobile){
+                        width: 40%;
+                     }
+
+
+                       &::before{
+                            content:'';
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top:0;
+                            left:0;
+                            background-color: #FFFFFF;
+                            opacity: 0.2;
+                            border-radius: 10px;
+    
+                        }
+
+                        @include responsive(laptop){
+                            @include Btn( $padding: 20px 20px );
+                        }
+                        
+                }
+            }
+
+            .rightSection{
+                @include displayFlex ($direction:column, $gap:20px);
+
+                position: absolute;
+                top:121px;
+                right: 0;
+                .time{
+                    position: relative;
+                    width: fit-content;
+                    padding: 20px 30px;
+                    @include responsive(mobile){
+                        padding: 10px 20px;
+                    }
+                    @include responsive(small-mobile){
+                        padding: 10px 20px;
+                    }
+
+                    h3{
+                        font-family: semiBold;
+                        font-style: normal;
+                        font-weight: 600;
+                         font-size: 40px;
+                         line-height: 40px;
+                         letter-spacing: 1px;
+                         color: $fitnessYellow;
+                         @include responsive(mobile){
+                            font-size:30px;
+                        }
+                        @include responsive(small-mobile){
+                            font-size: 20px;
+                        }
+
+                    }
+                    p{
+                        font-family: regular;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 13px;
+                        letter-spacing: 1px;
+                         color: #FFFFFF;
+                         @include responsive(mobile){
+                            font-size:10px;
+                        }
+                        @include responsive(small-mobile){
+                            font-size: 8px;
+                        }
+
+                    }
+                    &::before{
+                        content:'';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        background-color: #FFFFFF;
+                        opacity: 0.2;
+                        border-radius: 10px;
+
+                    }
+
+                }
+                .calories{
+                    position: relative;
+                    width: fit-content;
+                    padding: 20px 30px 20px 40px;
+                    @include responsive(mobile){
+                        padding: 10px 22px;
+                    }
+                    @include responsive(small-mobile){
+                        padding: 10px 15px;
+                    }
+
+                    h3{
+                        font-family: semiBold;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 40px;
+                        line-height: 40px;
+                        letter-spacing: 1px;
+                        color:$fitnessRed;
+                        @include responsive(mobile){
+                            font-size: 30px;
+                        }
+                        @include responsive(small-mobile){
+                            font-size: 20px;
+
+                        }
+
+                    }
+                    p{
+                        font-family: regular;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 20px;
+                        letter-spacing: 1px;
+                        color: #FFFFFF;
+                        @include responsive(mobile){
+                            font-size:10px;
+                        }
+                        @include responsive(small-mobile){
+                            font-size: 8px;
+                        }
+
+                    }
+                    
+                    &::before{
+                        content:'';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        background-color: #FFFFFF;
+                        opacity: 0.2;
+                        border-radius: 10px;
+
+                    }
+
+                }
+            }
+           
+        }
+    }
+}

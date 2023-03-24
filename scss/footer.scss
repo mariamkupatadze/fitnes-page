@@ -1,0 +1,85 @@
+.footer{
+    margin-top:350px;
+    width: 100%;
+                            
+    .container{
+        
+        .row{
+            .boxes{
+                width:100%;
+                @include displayFlex($direction:column,$justify:start);
+
+                mix-blend-mode: normal;
+                opacity: 0.4;
+                border-bottom: 0.5px solid #FFFFFF;
+                padding-top: 50.5px;
+                padding-bottom: 50px;
+
+                &:last-child{
+                    border-bottom:none;
+                }
+                
+                                                
+                .box-1{
+                    width: 100%;
+                    @include displayFlex($justify:space-between, $align:center);
+                    h4{
+                        font-family: semiBold;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 25px;
+                        line-height: 35px;
+                        color: #FFFFFF;
+                        mix-blend-mode: normal;
+                        opacity: 0.34;
+
+                    }
+                    .box-2{
+
+                        h1{
+                        
+                             font-family: regular;
+                             font-style: normal;
+                             font-weight: 400;
+                             font-size: 50px;
+                             line-height: 70px;
+                             letter-spacing: 0.833333px;
+                             color: #FFFFFF;
+                             margin-bottom: 10px;
+                             @include responsive(mobile){
+                                font-size: 30px;
+                                margin-bottom: 2px;
+                                line-height: 50px;
+                            }
+                            @include responsive(small-mobile){
+                                font-size: 22px;
+                                
+                            }
+                            
+                        }
+                        p{
+                            font-family: regular;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 23px;
+                            letter-spacing: 0.5px;
+                            color: #FFFFFF;
+                            mix-blend-mode: normal;
+                            opacity: 0.5;
+    
+                        }
+
+                    }
+                   
+                    img{
+                        width:fit-content;
+                        height: fit-content;
+                    }
+
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.popularExercises{
+    margin-top:190px;
+    @include responsive(small-mobile){
+        margin-top: 130px;
+
+     }
+    
+
+    .container{
+        .row{
+            .header{
+                @include displayFlex($justify: space-between, $align:center);
+                width: 100%;
+                @include responsive(small-mobile){
+                    @include displayFlex($direction:column, $justify: space-between, $align:center, $gap:20px);
+
+                 }
+
+                h2{
+                    font-family: semiBold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 35px;
+                    line-height: 45px;
+                    letter-spacing: 0.3px;
+                    color: #FFFFFF;
+                    @include responsive(small-mobile){
+                        font-size: 25px;
+                    }
+
+                }
+                p{
+                    font-family: regular;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 12px;
+                    letter-spacing: 1.5px;
+                    color: #FFFFFF;
+                    opacity: 0.67;
+                }
+            }
+            .exercises{
+                margin-top:50px;
+                @include displayFlex($justify:space-between);
+                flex-wrap: wrap;
+                row-gap:80px;
+                @include responsive(laptop){
+                    @include displayFlex($justify:space-evenly);
+                    row-gap:50px;
+                    column-gap:10px;
+                    
+                }
+
+
+                .card{
+                    height: 300px;
+                   
+                    img{
+                        width:100%;
+
+                    }
+                    .card-body{
+                        padding-left: 20px;
+                        position: relative;
+                        top:-12%;
+
+                        h1{
+                            font-family: semiBold;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 50px;
+                            line-height: 45px;
+                            letter-spacing: 0.3px;
+                            color: #FFFFFF;
+                            margin-bottom: 15px;
+                        }
+                        p{
+                            font-family: regular;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 13px;
+                           line-height: 14px;
+                            letter-spacing: 0.5px;
+                             color: #FFFFFF;
+                            opacity: 0.67;
+
+                        }
+                        span{
+                            font-family: semiBold;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 19px;
+                            letter-spacing: 1.36667px;
+                            color: #FFFFFF;
+                            position: absolute;
+                            top:0;
+                            right: 0;
+                            display: inline-block;
+                            padding-top:10px;
+                            padding-left: 10px;
+                            border-top-left-radius: 15px;
+                            background-color: black;
+                        }
+
+                    }
+
+                }
+            }
+
+            
+        }
+    }
+}
